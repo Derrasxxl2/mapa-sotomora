@@ -128,12 +128,20 @@
   .cta-btn{display:inline-block;padding:16px 40px;background:var(--white);color:var(--green);font-family:'DM Sans',sans-serif;font-size:13px;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;text-decoration:none;border-radius:100px;white-space:nowrap;flex-shrink:0;transition:all .2s;box-shadow:0 4px 16px rgba(0,0,0,0.15)}
   .cta-btn:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(0,0,0,0.2)}
 
+  .map-cta{grid-column:1 / 2;margin:0;border-radius:16px;padding:34px 32px;align-items:center;gap:24px}
+  .map-cta h2{font-size:clamp(24px,3vw,36px);max-width:430px}
+  .map-cta p{font-size:13px}
+  .map-cta .cta-btn{padding:14px 28px;font-size:12px}
+  .map-layout .sidebar{grid-column:2;grid-row:1 / span 2}
+
   /* FOOTER */
 
   @media(max-width:900px){
     nav{padding:0 20px} nav ul,.nav-pill{display:none}
     .hero,.map-section,.data-section,.table-section{padding-left:20px;padding-right:20px}
     .map-layout{grid-template-columns:1fr} .kpi-grid{grid-template-columns:1fr}
+    .map-cta{grid-column:auto;margin:0;flex-direction:column;padding:32px 24px;align-items:flex-start}
+    .map-layout .sidebar{grid-column:auto;grid-row:auto}
     .cta-block{margin:0 20px 60px;flex-direction:column;padding:40px 28px}
     .hero-stats{flex-direction:column}
     .hero-stat{border-right:none;border-bottom:1px solid var(--border)}
@@ -407,6 +415,14 @@
       </div>
     </div>
 
+    <div class="cta-block map-cta">
+      <div>
+        <h2>¿Cuánto puedes gastar<br><em>realmente</em> en una casa?</h2>
+        <p>Introduce tu salario y tus ahorros. Calculamos lo que el banco te puede prestar.</p>
+      </div>
+      <a href="https://soto-mora-calculadora-hipotecas.vercel.app/" target="_blank" class="cta-btn">Abrir calculadora →</a>
+    </div>
+
     <div class="sidebar">
       <div class="sidebar-card">
         <div class="sc-head">Top barrios por precio</div>
@@ -483,13 +499,6 @@
   </table>
 </section>
 
-<div class="cta-block">
-  <div>
-    <h2>¿Cuánto puedes gastar<br><em>realmente</em> en una casa?</h2>
-    <p>Introduce tu salario y tus ahorros. Calculamos lo que el banco te puede prestar.</p>
-  </div>
-  <a href="https://soto-mora-calculadora-hipotecas.vercel.app/" target="_blank" class="cta-btn">Abrir calculadora →</a>
-</div>
 
 
 <!-- tooltip -->
